@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+#todo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 50px;
+}
+
+input {
+    width: 350px;
+    display: block;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid green;
+    outline: none;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+input:focus {
+    border-bottom: 2px solid #e12020;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons input {
+    width: 50%;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.buttons #send {
+    background-color: #4bb943aa;
+}
+
+.buttons #reset {
+    background-color: #d8a435d5;
+}
+
+.buttons #send:hover {
+    background-color: #197b10a0;
+}
+
+.buttons #reset:hover {
+    background-color: #ac7500e0;
+}
+
+.buttons #reset:active {
+    background-color: #e12020;
+}
+
+.buttons #send:active {
+    background-color: #15ff00e0;
+}
+
+table {
+    height: fit-content;
+    border-collapse: collapse;
+    text-align: center;
+    /* ! ISLEMEDI ! */
+    /* max-height: 150px;
+    overflow-y: auto; */
+}
+
+/* ! ISLEMEDI ! */
+/* tbody {
+    max-height: 150px;
+    overflow-y: auto;
+} */
+
+th,
+td {
+    padding: 5px 10px;
+}
+
+th {
+    background-color: #a3ca9fa0;
+    border-block: 1px solid #c1bfbf9e;
+}
+
+input,
+tr {
+    margin-block: 10px;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+tr .check-box {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+tr .check-box input {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+
+
+
+
+
+tr td input {
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+
+
+
+
+
+tr {
+    background-color: #ffffffd7;
+    border-bottom: 1px solid #e1e1e1;
+}
+tbody tr:hover {
+    background-color: #e1e1e1;
+    border-bottom: 1px solid #8f8f8f;
+}
+
+tbody #btns button {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+}
+
+tbody #btns {
+    display: flex;
+    gap: 5px;
+}
+
+#delete {
+    background-color: #e83636;
+}
+
+#edit {
+    background-color: #0dcbe8;
+}
+
+#save {
+    background-color: rgb(0, 235, 0);
+    display: none;
+}
+
+/* .delete-all {
+    position: relative;
+} */
+
+.delete-all button {
+    background-color: #e83636;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+    /* cursor: not-allowed; */
+}
+
+/* .delete-all p {
+    background-color: rgba(37, 203, 148, 0.459);
+    color: #fff;
+    font-size: 12px;
+    width: 100px;
+    position: absolute;
+    top: -45px;
+    right: -85px;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: none;
+} */
+
+/* .delete-all:hover>p {
+    display: block;
+} */
+
+.warning,
+.area-alert {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background-color: rgba(169, 95, 238, 0.889);
+    height: 150px;
+    width: 500px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.warning h1,
+.area-alert h1 {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+}
+
+.warn-exit,
+.alert-exit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+}
+
+.warn-exit span,
+.alert-exit span {
+    cursor: pointer;
+}
